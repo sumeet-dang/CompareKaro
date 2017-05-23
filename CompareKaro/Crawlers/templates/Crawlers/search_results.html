@@ -1,0 +1,143 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Search Results{% endblock %}
+
+{% block stylesheets %}
+  <link rel="stylesheet" href="/static/css/crawlers.css">
+{% endblock %}
+
+{% block content %}
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4 class="panel-title list-source">Items From amazon.in</h4>
+  </div>
+  <div class="panel-body">
+    <div class="item-desc" id="amazon_list">
+      <div class="hide_scroll">
+        <ul class="source-list">
+            {% for item in amazon_list %}
+            <li>
+            <div class="item-content">
+            <img src="{{ item.Image }}" alt="{{ Item.Name }}" class="img_responsive float-left">
+            <div class="item-details">
+              <a href="{{ item.Url }}">{{ item.Name }}</a><br>
+                <span>&#8377;&nbsp{{ item.Price }}</span>
+            </div>
+            </div>
+          </li>
+            {% endfor %}
+        </ul>
+        </div>
+    </div>
+  </div>
+</div>
+
+<br><br>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4 class="panel-title list-source">Items From snapdeal.in</h4>
+  </div>
+  <div class="panel-body">
+    <div class="item-desc" id="snapdeal_list">
+      <div class="hide_scroll">
+        <ul class="source-list">
+            {% for item in snapdeal_list %}
+            <li>
+            <div class="item-content">
+            <img src="{{ item.Image }}" alt="{{ Item.Name }}" class="img_responsive float-left">
+            <div class="item-details">
+              <a href="{{ item.Url }}">{{ item.Name }}</a><br>
+                <span>&#8377;&nbsp{{ item.Price }}</span>
+            </div>
+            </div>
+          </li>
+            {% endfor %}
+        </ul>
+        </div>
+    </div>
+  </div>
+</div>
+
+<br><br>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4 class="panel-title list-source">Items From ebay.in</h4>
+  </div>
+  <div class="panel-body">
+    <div class="item-desc" id="ebay_list">
+      <div class="hide_scroll">
+        <ul class="source-list">
+            {% for item in ebay_list %}
+            <li>
+            <div class="item-content">
+            <img src="{{ item.Image }}" alt="{{ Item.Name }}" class="img_responsive float-left">
+            <div class="item-details">
+              <a href="{{ item.Url }}">{{ item.Name }}</a><br>
+                <span>&#8377;&nbsp{{ item.Price }}</span>
+            </div>
+            </div>
+          </li>
+            {% endfor %}
+        </ul>
+        </div>
+    </div>
+  </div>
+</div>
+
+<br><br>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4 class="panel-title list-source">Minimum Items Across All Sites</h4>
+  </div>
+  <div class="panel-body">
+    <div class="item-desc" id="minimum_list">
+      <div class="hide_scroll">
+        <ul class="source-list">
+            {% for item in minimum_list %}
+            <li>
+            <div class="item-content">
+            <img src="{{ item.Image }}" alt="{{ Item.Name }}" class="img_responsive float-left">
+            <div class="item-details">
+              <a href="{{ item.Url }}">{{ item.Name }}</a><br>
+                <span>&#8377;&nbsp{{ item.Price }}</span><br>
+
+              <span>Source : {{ item.Source }}</span>
+            </div>
+            </div>
+          </li>
+            {% endfor %}
+        </ul>
+        </div>
+    </div>
+  </div>
+</div>
+
+<script>
+$(function() {
+
+  $(".div-logos").css("display","none")
+
+ $("#amazon_list").mousewheel(function(event, delta) {
+    this.scrollLeft -= (delta * 60);
+    event.preventDefault();
+ });
+ $("#snapdeal_list").mousewheel(function(event, delta) {
+    this.scrollLeft -= (delta * 60);
+    event.preventDefault();
+ });
+ $("#ebay_list").mousewheel(function(event, delta) {
+    this.scrollLeft -= (delta * 60);
+    event.preventDefault();
+ });
+ $("#minimum_list").mousewheel(function(event, delta) {
+    this.scrollLeft -= (delta * 60);
+    event.preventDefault();
+ });
+
+});
+</script>
+{% endblock %}

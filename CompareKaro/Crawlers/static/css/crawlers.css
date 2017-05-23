@@ -1,0 +1,125 @@
+.float-right{
+  float:right!important;
+}
+
+.float-left{
+  float:left;
+}
+
+.no-float{
+  float:none!important;
+}
+
+.left-margin{
+  margin-left: 10%;
+}
+
+.right-margin{
+  margin-right:100px;
+}
+
+.in-line{
+  display: inline;
+}
+
+.scroll-overflow{
+  overflow-x:scroll;
+  overflow-y: hidden;
+}
+
+.source-list{
+  list-style: none;
+}
+
+.source-list * {
+  display: inline;
+}
+
+.list-source{
+    margin-left: 40px;
+    font-weight: bold;
+    font-style: italic;
+    color : #789bd3!important;
+}
+
+.item-desc{
+    width: 100%;
+    height: 350px;
+    overflow:hidden;
+    white-space:nowrap;
+    display: inline-flex;
+    align-items: center;
+    padding:20px;
+    border:2px solid #ddd;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+}
+
+.hide-scroll{
+  overflow-x: scroll;
+}
+
+.middle-align{
+  vertical-align: middle;
+}
+
+.item-content{
+  width: 500px;
+  height: 250px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border:1px solid black;
+  border-radius: 10px;
+  display:inline-block;
+  display:inline-flex;
+  align-items:center;
+}
+
+.item-content a{
+  white-space: pre-wrap; /* css-3 */
+   white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+   white-space: -pre-wrap; /* Opera 4-6 */
+   white-space: -o-pre-wrap; /* Opera 7 */
+   word-wrap: break-word; /* Internet Explorer 5.5+ */
+
+}
+
+.item-details {
+  display:block;
+  padding:10px;
+  text-align: left!important;
+  font-weight: bold;
+  height:200px;
+
+  -moz-box-orient: vertical;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+  display: -ms-box;
+  display: -moz-box;
+  display: -webkit-box;
+  display: box;
+}
+
+.item-details span{
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+}
+
+img{
+  width:218px;
+  height:218px;
+}
+
+.item-details span{
+  font-size: 13px;
+  line-height: 19px;
+  display:inline-block;
+  vertical-align:bottom;
+  margin-top: auto;
+  color:#b12704;
+}
+
+.search-box {
+  margin-top:100px;
+}
